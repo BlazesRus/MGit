@@ -28,9 +28,6 @@ android {
         dataBinding true
     }
 
-    lintOptions {
-        abortOnError false
-    }
 
     signingConfigs {
         if (project.hasProperty('special')) {
@@ -54,6 +51,9 @@ android {
         release {
             signingConfig signingConfigs.release
         }
+    }
+    lint {
+        abortOnError false
     }
 }
 
